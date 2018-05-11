@@ -1,0 +1,12 @@
+[sender_config]
+username = email@email.com
+password = passwordhere
+host = mail.email.com
+port = 25
+sender_details = FromName user domain
+
+[rss_feeds]
+rss_feed_list = http://www.domain.com/rss http://www.domain2.com/rss http://www.domain3.com/rss
+
+[recipients_config]
+recipients = FromName user domain;FromName2 user2 domain2
