@@ -1,5 +1,3 @@
-#!/home/kazasu/programming/python/rss_update_notifier/venv/bin/python
-
 import setproctitle
 import feedparser
 import pickle
