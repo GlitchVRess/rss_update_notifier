@@ -35,7 +35,7 @@ def feed_grab(config):
 
 
 def email_me(message, subject, config):
-    """ This module pulls the sending email configuration from the
+    """ This function pulls the sending email configuration from the
     config file, creates an smtp connection, and then sends out an
     email to the recipients listed in the recipient config containing
     the comic and update tile for any comics updated since the last
@@ -127,10 +127,10 @@ except FileNotFoundError:
 else:
     file_check = True
 
-    # For each rss url it checks to see if the latest update is
-    # different from what we have stored in our lastupdate file. If
-    # there was no lastupdate file found, it sends an email containing
-    # all of the comic's most recent update and creates a new file.
+# For each rss url it checks to see if the latest update is
+# different from what we have stored in our lastupdate file. If
+# there was no lastupdate file found, it sends an email containing
+# all of the comic's most recent update and creates a new file.
 for each in feed_data:
     if file_check is True:
         if feed_data[each][0] != itemlist[each][0]:
