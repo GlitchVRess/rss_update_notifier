@@ -122,7 +122,7 @@ class RSSReader:
             cursor.execute("SELECT * FROM rss WHERE title=?", (feed['title'],))
             row = cursor.fetchone()
             if row:
-                if row[3] is not feed['post_url']:
+                if row[3] != feed['post_url']:
                     query = ''' UPDATE rss
                             SET last_update_title = ?,
                             last_update_url = ?
@@ -152,7 +152,7 @@ class RSSReader:
             for feed in feed_data:
                 if feed['updated'] is True:
                     email_data.append("{}:   {} - {}".format(
-                                                    feed,
+                                                    feed['title'],
                                                     feed['post_title'],
                                                     feed['post_url']))
 
